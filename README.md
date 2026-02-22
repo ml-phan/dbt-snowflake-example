@@ -11,8 +11,6 @@ The workflow follows a layered architecture:
 CSV files → RAW (seed) → TRANSFORMED (dbt model) → Analytical Queries
 ```
 
----
-
 ## Project Structure
 These are the relevant files and folders in the project:
 
@@ -29,15 +27,12 @@ dbt_banxware_assignment/
   dbt_project.yml
 ```
 
----
-
 ## Requirements
 
 * Python 3.13+
 * Snowflake account (trial is sufficient)
 * Python library: dbt-snowflake
 
----
 
 ## Setup Instructions
 
@@ -62,7 +57,6 @@ Install dbt Snowflake adapter:
 pip install dbt-snowflake
 ```
 
----
 
 ### 2) Configure Snowflake
 
@@ -71,8 +65,6 @@ Create a database in Snowflake:
 ```sql
 CREATE DATABASE HOME_ASSIGNMENT;
 ```
-
----
 
 ### 3) Configure dbt profile
 
@@ -105,8 +97,6 @@ Validate connection:
 ```bash
 dbt debug
 ```
-
----
 
 ## Running the Pipeline
 
@@ -146,8 +136,6 @@ After these steps the transformed table will be created:
 HOME_ASSIGNMENT.PUBLIC.TRANSFORMED_SALES_DATA
 ```
 
----
-
 ## Running Analytical Queries
 
 The `queries/` folder contains SQL files answering the business questions.
@@ -159,8 +147,6 @@ HOME_ASSIGNMENT.ANALYTICS.TRANSFORMED_SALES_DATA
 ```
 
 These queries are intentionally written as plain SQL (not dbt models) to allow direct execution by analysts.
-
----
 
 ## Reproducibility
 
@@ -174,16 +160,12 @@ dbt test
 
 No manual table creation or data uploads are required.
 
----
-
 ## Notes
 
 * Raw data remains unchanged during ingestion
 * Transformations are handled in dbt models
 * Data assumptions are enforced using tests
 * Queries are separated from transformation
-
----
 
 ## Author
 

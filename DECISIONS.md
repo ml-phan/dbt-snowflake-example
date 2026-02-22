@@ -4,21 +4,15 @@
 
 The goal of this assignment is to ingest raw CSV data into Snowflake, transform it using dbt, and provide analytical queries answering business questions.
 
----
-
 ## Data Ingestion
 
 The provided CSV files were ingested using **dbt seeds**.
-
----
 
 ## Tables
 
 Raw tables: `raw_sales_data`, `raw_customer_data`
 
 Transformed table: `transformed_sales_data`
-
----
 
 ## Handling Data Types
 
@@ -35,8 +29,6 @@ Transformation step:
 ```
 TEXT → DATE using try_to_date()
 ```
-
----
 
 ## Data Transformation
 
@@ -72,8 +64,6 @@ The correctness of monetary calculations depends on one row per order.
 
 This prevents silent data corruption if upstream ingestion changes.
 
----
-
 ## 8. Reproducibility
 
 The project can be executed with:
@@ -85,8 +75,6 @@ dbt test
 ```
 
 No manual database manipulation is required.
-
----
 
 ## Conclusion
 
