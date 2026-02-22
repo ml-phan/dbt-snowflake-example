@@ -1,0 +1,7 @@
+seeds:
+  - name: raw_sales_data
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
